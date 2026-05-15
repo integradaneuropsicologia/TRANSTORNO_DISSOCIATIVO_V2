@@ -372,207 +372,942 @@ const SCALE_SCORE_MAPS = {
     /**************************************************************
  * CONFIGURAÇÃO DAS PERGUNTAS (DINÂMICO)
  **************************************************************/
+
 const FORM_QUESTIONS = [
-  
-{
-  name: "1",
-  section: "Dissociativos — Triagem",
-  type: "radio",
-  text: "Existem episódios recorrentes de sensação de distanciamento da própria experiência, identidade ou memória?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "2",
-  section: "Dissociativos — Triagem",
-  type: "radio",
-  text: "Essas experiências causam sofrimento significativo ou prejuízo no funcionamento social, profissional ou pessoal?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
+  {
+    name: "1",
+    type: "radio",
+    section: "Dissociativo — Triagem Geral",
+    text: "Você já teve momentos em que se sentiu desconectado de si mesmo, do próprio corpo, das emoções, das lembranças ou do ambiente ao redor?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "2",
+    type: "radio",
+    section: "Dissociativo — Triagem Geral",
+    text: "Você já teve sensação de estar funcionando no automático, como se uma parte de você estivesse agindo enquanto outra apenas observava?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "3",
+    type: "radio",
+    section: "Dissociativo — Triagem Geral",
+    text: "Você já teve episódios em que se sentiu estranho para si mesmo, como se não reconhecesse totalmente quem você é naquele momento?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "4",
+    type: "radio",
+    section: "Dissociativo — Triagem Geral",
+    text: "Você já teve episódios em que o mundo parecia distante, artificial, estranho, irreal ou como se estivesse em um sonho?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "5",
+    type: "radio",
+    section: "Dissociativo — Triagem Geral",
+    text: "Essas experiências causam sofrimento, medo, confusão, prejuízo na rotina ou sensação de perda de controle?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "3",
-  section: "Despersonalização",
-  type: "radio",
-  text: "Sensação de estar fora do próprio corpo ou observando a si mesmo de fora?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "4",
-  section: "Despersonalização",
-  type: "radio",
-  text: "Entorpecimento emocional ou sensação de que nada o afeta emocionalmente?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "5",
-  section: "Despersonalização",
-  type: "radio",
-  text: "Sensação de agir ou falar no piloto automático?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "6",
-  section: "Despersonalização",
-  type: "radio",
-  text: "Alterações estranhas na percepção do próprio corpo (tamanho, peso ou sensação de não pertencer ao corpo)?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "6",
+    type: "radio",
+    section: "Dissociativo — Despersonalização",
+    text: "Você já sentiu como se estivesse fora do próprio corpo, observando a si mesmo de longe?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "7",
+    type: "radio",
+    section: "Dissociativo — Despersonalização",
+    text: "Você já sentiu que seu corpo, sua voz, seus movimentos ou suas ações não pareciam totalmente seus?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "8",
+    type: "radio",
+    section: "Dissociativo — Despersonalização",
+    text: "Você já sentiu como se estivesse assistindo sua vida acontecer, mas sem se sentir plenamente dentro dela?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "9",
+    type: "radio",
+    section: "Dissociativo — Despersonalização",
+    text: "Você já sentiu que suas emoções estavam desligadas, anestesiadas ou distantes, como se soubesse o que deveria sentir, mas não conseguisse sentir de verdade?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "10",
+    type: "radio",
+    section: "Dissociativo — Despersonalização",
+    text: "Você já sentiu que suas lembranças pareciam pertencer a outra pessoa ou pareciam distantes demais para serem realmente suas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "11",
+    type: "radio",
+    section: "Dissociativo — Despersonalização",
+    text: "Durante esses episódios, você mantém alguma noção de que essa sensação de estranhamento pode ser uma experiência interna, e não necessariamente uma mudança real no mundo externo?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "7",
-  section: "Desrealização",
-  type: "radio",
-  text: "Sensação de que o mundo ao redor parece irreal, como em um sonho ou filme?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "8",
-  section: "Desrealização",
-  type: "radio",
-  text: "Pessoas ou ambientes parecem distantes, artificiais ou sem vida?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "9",
-  section: "Desrealização",
-  type: "radio",
-  text: "Percepções de sons, cores ou tempo parecem alteradas ou irreais?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "12",
+    type: "radio",
+    section: "Dissociativo — Desrealização",
+    text: "Você já sentiu que o ambiente ao seu redor parecia falso, distante, nebuloso, sem vida, artificial ou como um cenário?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "13",
+    type: "radio",
+    section: "Dissociativo — Desrealização",
+    text: "Você já sentiu que pessoas conhecidas pareciam estranhas, irreais, distantes ou emocionalmente desconectadas de você?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "14",
+    type: "radio",
+    section: "Dissociativo — Desrealização",
+    text: "Você já sentiu que sons, luzes, cores, distâncias ou objetos pareciam alterados, como se o mundo estivesse diferente do normal?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "15",
+    type: "radio",
+    section: "Dissociativo — Desrealização",
+    text: "Você já teve sensação de estar em um sonho, filme ou bolha, mesmo estando acordado e consciente?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "16",
+    type: "radio",
+    section: "Dissociativo — Desrealização",
+    text: "Durante essas sensações de irrealidade, você consegue reconhecer que o mundo provavelmente continua real, mesmo parecendo estranho para você?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "10",
-  section: "Amnésia Dissociativa",
-  type: "radio",
-  text: "Lacunas importantes de memória para eventos pessoais relevantes que não são explicadas por esquecimento comum?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "11",
-  section: "Amnésia Dissociativa",
-  type: "radio",
-  text: "Períodos de tempo (horas ou dias) em que não lembra o que fez?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "12",
-  section: "Amnésia Dissociativa",
-  type: "radio",
-  text: "Encontra objetos, mensagens ou compras que não lembra de ter feito?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "13",
-  section: "Amnésia Dissociativa",
-  type: "radio",
-  text: "Perde-se em trajetos conhecidos ou não lembra como chegou a determinados lugares?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
+  {
+    name: "17",
+    type: "radio",
+    section: "Dissociativo — Amnésia Dissociativa",
+    text: "Você tem lacunas de memória sobre acontecimentos importantes da sua vida que não parecem ser explicadas por esquecimento comum?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "18",
+    type: "radio",
+    section: "Dissociativo — Amnésia Dissociativa",
+    text: "Você já percebeu que não consegue lembrar partes importantes de períodos difíceis, traumáticos, estressantes ou emocionalmente intensos da sua vida?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "19",
+    type: "radio",
+    section: "Dissociativo — Amnésia Dissociativa",
+    text: "Você já teve dificuldade de lembrar informações pessoais importantes, como partes da infância, adolescência, relacionamentos, acontecimentos familiares ou eventos marcantes?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "20",
+    type: "radio",
+    section: "Dissociativo — Amnésia Dissociativa",
+    text: "Você já descobriu que fez coisas, teve conversas, enviou mensagens, comprou algo ou foi a lugares sem lembrar depois?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "21",
+    type: "radio",
+    section: "Dissociativo — Amnésia Dissociativa",
+    text: "Outras pessoas já contaram que você fez ou disse algo que você não consegue lembrar de ter feito ou dito?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "22",
+    type: "radio",
+    section: "Dissociativo — Amnésia Dissociativa",
+    text: "Essas falhas de memória acontecem sem uso de álcool, drogas, medicamentos sedativos, desmaios, sono ou condição neurológica conhecida?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "14",
-  section: "Identidade Dissociativa",
-  type: "radio",
-  text: "Sensação de possuir diferentes 'partes' internas com pensamentos, emoções ou comportamentos distintos?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "15",
-  section: "Identidade Dissociativa",
-  type: "radio",
-  text: "Outras pessoas percebem mudanças marcantes de voz, expressão ou comportamento como se fosse outra pessoa?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "16",
-  section: "Identidade Dissociativa",
-  type: "radio",
-  text: "Mudanças súbitas de preferências, habilidades ou modo de agir?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "17",
-  section: "Identidade Dissociativa",
-  type: "radio",
-  text: "Períodos em que outra 'parte' parece assumir o controle seguidos de lacunas de memória?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
+  {
+    name: "23",
+    type: "radio",
+    section: "Dissociativo — Fuga Dissociativa",
+    text: "Você já saiu de casa, viajou, caminhou sem rumo ou foi para algum lugar sem lembrar claramente como chegou lá?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "24",
+    type: "radio",
+    section: "Dissociativo — Fuga Dissociativa",
+    text: "Você já teve episódios em que se afastou de lugares conhecidos e depois ficou confuso sobre onde estava ou por que estava ali?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "25",
+    type: "radio",
+    section: "Dissociativo — Fuga Dissociativa",
+    text: "Você já teve momentos em que esqueceu temporariamente quem era, detalhes da própria história ou informações pessoais importantes?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "26",
+    type: "radio",
+    section: "Dissociativo — Fuga Dissociativa",
+    text: "Algum episódio de perda de memória envolveu deslocamento, viagem ou afastamento físico do ambiente habitual?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "18",
-  section: "Dissociativos — Diferencial",
-  type: "radio",
-  text: "Durante essas experiências a pessoa mantém consciência de que a sensação é interna e não uma alteração real do ambiente?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "19",
-  section: "Dissociativos — Diferencial",
-  type: "radio",
-  text: "Essas experiências não são explicadas por uso de substâncias ou condição neurológica conhecida?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-}
+  {
+    name: "27",
+    type: "radio",
+    section: "Dissociativo — Identidade e Senso de Si",
+    text: "Você sente que existem partes de você com modos muito diferentes de pensar, sentir, agir, falar ou se relacionar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "28",
+    type: "radio",
+    section: "Dissociativo — Identidade e Senso de Si",
+    text: "Você já sentiu como se uma parte sua assumisse o controle das suas ações, fala ou decisões, enquanto outra parte apenas observava ou não conseguia interferir?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "29",
+    type: "radio",
+    section: "Dissociativo — Identidade e Senso de Si",
+    text: "Você percebe mudanças bruscas no seu jeito de falar, escrever, se vestir, andar, reagir ou se comportar, como se estivesse em um estado muito diferente de si mesmo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "30",
+    type: "radio",
+    section: "Dissociativo — Identidade e Senso de Si",
+    text: "Você já se sentiu como se tivesse mais de um modo de ser, com preferências, memórias, emoções ou atitudes muito diferentes entre si?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "31",
+    type: "radio",
+    section: "Dissociativo — Identidade e Senso de Si",
+    text: "Você já foi chamado por nomes, apelidos ou formas de tratamento que pareciam ligados a estados diferentes de você?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "32",
+    type: "radio",
+    section: "Dissociativo — Identidade e Senso de Si",
+    text: "Você já percebeu objetos, roupas, anotações, mensagens, compras ou decisões que parecem suas, mas que você não lembra de ter feito?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "33",
+    type: "radio",
+    section: "Dissociativo — Identidade e Senso de Si",
+    text: "Você já sentiu que sua idade interna, postura, voz, personalidade ou forma de reagir mudavam de modo muito intenso em certos momentos?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
 
+  {
+    name: "34",
+    type: "radio",
+    section: "Dissociativo — Identidade Dissociativa",
+    text: "Você já teve a sensação de que diferentes estados de identidade alternam o controle do seu comportamento, memória, fala ou percepção?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "35",
+    type: "radio",
+    section: "Dissociativo — Identidade Dissociativa",
+    text: "Você já percebeu que certos estados seus têm lembranças, sentimentos, gostos, habilidades, medos ou formas de agir que outros estados não parecem ter?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "36",
+    type: "radio",
+    section: "Dissociativo — Identidade Dissociativa",
+    text: "Você já sentiu vozes internas, diálogos internos ou partes internas discutindo, comentando ou influenciando suas decisões, sem parecerem vozes externas no ambiente?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "37",
+    type: "radio",
+    section: "Dissociativo — Identidade Dissociativa",
+    text: "Você já percebeu mudanças de estado emocional ou comportamento tão fortes que outras pessoas dizem que você parece outra pessoa?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "38",
+    type: "radio",
+    section: "Dissociativo — Identidade Dissociativa",
+    text: "Você tem falhas de memória associadas a essas mudanças de estado, como não lembrar o que aconteceu enquanto estava em determinado modo de funcionamento?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "39",
+    type: "radio",
+    section: "Dissociativo — Identidade Dissociativa",
+    text: "Essas mudanças de identidade ou estado interno não são explicadas por brincadeira, fantasia voluntária, prática religiosa/cultural aceita ou encenação consciente?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
+  {
+    name: "40",
+    type: "radio",
+    section: "Dissociativo — Dissociação e Trauma",
+    text: "Essas experiências dissociativas começaram ou pioraram após trauma, abuso, violência, negligência, ameaça, perda importante ou situação de medo intenso?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "41",
+    type: "radio",
+    section: "Dissociativo — Dissociação e Trauma",
+    text: "Você dissocia com mais frequência quando algo lembra experiências traumáticas, como cheiro, som, lugar, pessoa, data, toque, tom de voz ou sensação corporal?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "42",
+    type: "radio",
+    section: "Dissociativo — Dissociação e Trauma",
+    text: "Durante lembranças traumáticas, você sente que sai do corpo, congela, perde a noção do tempo ou fica desligado do que está acontecendo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "43",
+    type: "radio",
+    section: "Dissociativo — Dissociação e Trauma",
+    text: "Você tem dificuldade de lembrar partes de eventos traumáticos, mesmo sabendo que esses eventos aconteceram?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "44",
+    type: "radio",
+    section: "Dissociativo — Dissociação e Trauma",
+    text: "Você sente que a dissociação funciona como uma forma automática de se proteger de dor emocional, medo, vergonha, raiva ou lembranças difíceis?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "45",
+    type: "radio",
+    section: "Dissociativo — Gatilhos e Estados",
+    text: "Essas experiências acontecem mais em momentos de estresse, conflito, rejeição, medo, vergonha, exaustão, crise emocional ou sobrecarga sensorial?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "46",
+    type: "radio",
+    section: "Dissociativo — Gatilhos e Estados",
+    text: "Você percebe que certos gatilhos fazem você mudar de estado emocional ou comportamental de forma rápida e intensa?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "47",
+    type: "radio",
+    section: "Dissociativo — Gatilhos e Estados",
+    text: "Você já perdeu a noção do tempo durante crises emocionais, discussões, lembranças traumáticas ou situações de ameaça percebida?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "48",
+    type: "radio",
+    section: "Dissociativo — Gatilhos e Estados",
+    text: "Você já teve sensação de apagar emocionalmente durante situações intensas, como se desligasse para conseguir suportar o momento?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "49",
+    type: "radio",
+    section: "Dissociativo — Continuidade da Consciência",
+    text: "Você percebe interrupções na continuidade da sua consciência, como se alguns momentos do dia não tivessem sido plenamente vividos por você?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "50",
+    type: "radio",
+    section: "Dissociativo — Continuidade da Consciência",
+    text: "Você já percebeu que mudou de atividade, lugar, assunto ou emoção sem lembrar claramente da transição entre um momento e outro?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "51",
+    type: "radio",
+    section: "Dissociativo — Continuidade da Consciência",
+    text: "Você já teve sensação de tempo perdido, como se minutos, horas ou partes do dia tivessem desaparecido da sua memória?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "52",
+    type: "radio",
+    section: "Dissociativo — Continuidade da Consciência",
+    text: "Você já precisou reconstruir o que aconteceu perguntando a outras pessoas, olhando mensagens, histórico de chamadas, fotos, recibos ou objetos ao redor?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "53",
+    type: "radio",
+    section: "Dissociativo — Emoções e Corpo",
+    text: "Você já ficou emocionalmente anestesiado em situações em que esperava sentir medo, tristeza, raiva, afeto ou alegria?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "54",
+    type: "radio",
+    section: "Dissociativo — Emoções e Corpo",
+    text: "Você já teve sensação de que partes do corpo estavam estranhas, distantes, sem forma, grandes demais, pequenas demais ou não pertenciam totalmente a você?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "55",
+    type: "radio",
+    section: "Dissociativo — Emoções e Corpo",
+    text: "Você já percebeu dor, tensão, tremor, paralisia, fraqueza, perda de sensibilidade ou alterações corporais em momentos de estresse emocional intenso?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "56",
+    type: "radio",
+    section: "Dissociativo — Emoções e Corpo",
+    text: "Você já teve dificuldade de sentir fome, sede, dor, cansaço ou sinais corporais porque parecia desconectado do próprio corpo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "57",
+    type: "radio",
+    section: "Dissociativo — Prejuízo Funcional",
+    text: "Essas experiências dissociativas prejudicam seu trabalho, estudos, relacionamentos, rotina, autocuidado, segurança ou tomada de decisões?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "58",
+    type: "radio",
+    section: "Dissociativo — Prejuízo Funcional",
+    text: "Essas experiências fazem você evitar lugares, pessoas, conversas, responsabilidades ou situações por medo de perder controle, apagar ou se desconectar?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "59",
+    type: "radio",
+    section: "Dissociativo — Prejuízo Funcional",
+    text: "Você já teve prejuízo financeiro, profissional, acadêmico, familiar, social ou legal por causa de lapsos de memória, mudanças de estado ou comportamentos que não lembra bem?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "60",
+    type: "radio",
+    section: "Dissociativo — Prejuízo Funcional",
+    text: "Essas experiências causam medo de enlouquecer, perder o controle, não ser compreendido ou ser visto como estranho?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "61",
+    type: "radio",
+    section: "Dissociativo — Diferencial com Psicose",
+    text: "Durante essas experiências, você consegue considerar que a sensação de irrealidade ou desconexão pode ser interna, mesmo que pareça muito intensa?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "62",
+    type: "radio",
+    section: "Dissociativo — Diferencial com Psicose",
+    text: "Você ouve vozes como se viessem claramente de fora, no ambiente, e acredita que são reais mesmo quando outras pessoas não ouvem?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "63",
+    type: "radio",
+    section: "Dissociativo — Diferencial com Psicose",
+    text: "Você tem crenças fixas de perseguição, controle externo, mensagens especiais ou poderes, sem conseguir considerar explicações alternativas?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "64",
+    type: "radio",
+    section: "Dissociativo — Diferencial com Psicose",
+    text: "Suas experiências de vozes, partes internas ou diálogos parecem mais internas e ligadas a estados emocionais do que sons externos reais no ambiente?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "65",
+    type: "radio",
+    section: "Dissociativo — Diferencial com Pânico e Ansiedade",
+    text: "As sensações de irrealidade ou desconexão aparecem principalmente durante crises de ansiedade ou pânico, com coração acelerado, falta de ar, tontura ou medo de morrer?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "66",
+    type: "radio",
+    section: "Dissociativo — Diferencial com Pânico e Ansiedade",
+    text: "Quando a ansiedade diminui, as sensações de irrealidade, desconexão ou estranhamento também diminuem bastante?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "67",
+    type: "radio",
+    section: "Dissociativo — Diferencial com TEPT",
+    text: "As experiências dissociativas aparecem principalmente quando você lembra de trauma ou encontra gatilhos ligados a um evento traumático específico?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "68",
+    type: "radio",
+    section: "Dissociativo — Diferencial com TEPT",
+    text: "Você também apresenta lembranças intrusivas, pesadelos, flashbacks, evitação e hiperalerta ligados a trauma?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "69",
+    type: "radio",
+    section: "Dissociativo — Diferencial com Borderline",
+    text: "As experiências dissociativas aparecem principalmente durante conflitos, medo de abandono, rejeição, raiva intensa ou crises interpessoais?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "70",
+    type: "radio",
+    section: "Dissociativo — Diferencial com Borderline",
+    text: "Você também apresenta relacionamentos instáveis, impulsividade, vazio crônico, autoagressão, medo intenso de abandono ou raiva intensa?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "71",
+    type: "radio",
+    section: "Dissociativo — Diferencial Neurológico",
+    text: "Esses episódios vêm acompanhados de desmaios, convulsões, quedas, movimentos involuntários, confusão pós-crise, perda de urina ou mordida de língua?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "72",
+    type: "radio",
+    section: "Dissociativo — Diferencial Neurológico",
+    text: "Você já teve diagnóstico de epilepsia, crises convulsivas, traumatismo craniano, AVC, enxaqueca complexa, tumor, infecção neurológica ou outra condição neurológica?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "73",
+    type: "radio",
+    section: "Dissociativo — Diferencial Neurológico",
+    text: "As perdas de memória ou alterações de consciência começaram após pancada na cabeça, cirurgia, infecção, crise neurológica ou doença clínica importante?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "74",
+    type: "radio",
+    section: "Dissociativo — Diferencial Neurológico",
+    text: "Durante os episódios, outras pessoas percebem olhar parado, movimentos automáticos, ausência de resposta, confusão intensa ou alteração de consciência?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "75",
+    type: "radio",
+    section: "Dissociativo — Substâncias e Medicamentos",
+    text: "Essas experiências acontecem durante ou logo após uso de álcool, cannabis, cocaína, alucinógenos, estimulantes, calmantes, medicamentos para dormir ou outras substâncias?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "76",
+    type: "radio",
+    section: "Dissociativo — Substâncias e Medicamentos",
+    text: "Essas experiências começaram após início, aumento, retirada ou troca de medicações psiquiátricas, sedativos, anticonvulsivantes, corticoides ou outras medicações?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "77",
+    type: "radio",
+    section: "Dissociativo — Substâncias e Medicamentos",
+    text: "Quando você fica sem usar substâncias ou medicações que alteram consciência, essas experiências diminuem ou desaparecem?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "78",
+    type: "radio",
+    section: "Dissociativo — Sono e Estados Alterados",
+    text: "Essas experiências acontecem principalmente ao adormecer, ao acordar, durante paralisia do sono, privação de sono ou sonhos muito vívidos?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "79",
+    type: "radio",
+    section: "Dissociativo — Sono e Estados Alterados",
+    text: "Você tem episódios de sonambulismo, terror noturno, agir dormindo, falar dormindo ou realizar atividades sem lembrar ao acordar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "80",
+    type: "radio",
+    section: "Dissociativo — Cultura e Religiosidade",
+    text: "Essas experiências acontecem dentro de práticas religiosas, espirituais ou culturais aceitas pelo seu grupo, sem causar sofrimento ou prejuízo importante?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "81",
+    type: "radio",
+    section: "Dissociativo — Cultura e Religiosidade",
+    text: "Mesmo dentro do seu contexto religioso, espiritual ou cultural, essas experiências são vistas por você ou por outras pessoas como excessivas, perigosas, involuntárias ou prejudiciais?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "82",
+    type: "radio",
+    section: "Dissociativo — Curso e Duração",
+    text: "Essas experiências acontecem de forma recorrente, e não apenas uma única vez em situação extrema?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "83",
+    type: "radio",
+    section: "Dissociativo — Curso e Duração",
+    text: "Essas experiências persistem há semanas, meses ou anos, mesmo variando de intensidade?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "84",
+    type: "radio",
+    section: "Dissociativo — Curso e Duração",
+    text: "Você percebe que os episódios estão ficando mais frequentes, intensos ou prejudiciais ao longo do tempo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "85",
+    type: "radio",
+    section: "Dissociativo — Risco e Segurança",
+    text: "Durante episódios dissociativos, você já se colocou em risco, se perdeu, dirigiu sem consciência plena, se machucou ou fez algo perigoso sem lembrar bem depois?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "86",
+    type: "radio",
+    section: "Dissociativo — Risco e Segurança",
+    text: "Você já teve pensamentos de morte, autoagressão ou suicídio associados a dissociação, trauma, apagões, vergonha, medo ou perda de controle?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "87",
+    type: "radio",
+    section: "Dissociativo — Risco e Segurança",
+    text: "Você já encontrou ferimentos, objetos, mensagens, compras ou situações de risco sem lembrar claramente como aconteceram?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "88",
+    type: "radio",
+    section: "Dissociativo — Risco e Segurança",
+    text: "Atualmente, existe risco de você se machucar, tentar suicídio, se perder, agir sem consciência plena ou colocar outra pessoa em risco durante episódios dissociativos?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "89",
+    type: "radio",
+    section: "Dissociativo — Exclusões Gerais",
+    text: "Essas experiências são melhor explicadas por epilepsia, desmaios, alterações neurológicas, delirium, intoxicação, abstinência, medicações ou doença clínica?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "90",
+    type: "radio",
+    section: "Dissociativo — Exclusões Gerais",
+    text: "Essas experiências são melhor explicadas por psicose, mania, depressão grave, pânico, TEPT, transtorno de personalidade, sono ou prática cultural/religiosa aceita?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "91",
+    type: "radio",
+    section: "Dissociativo — Exclusões Gerais",
+    text: "Essas experiências acontecem apenas em situações normais de fantasia, imaginação, absorção em filmes/livros/jogos, oração, meditação ou devaneio voluntário?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  }
 ];
-
+    
 const INDICATORS_CONFIG = {};
 
     /**************************************************************
